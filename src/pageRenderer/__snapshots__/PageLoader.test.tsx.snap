@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PageLoader /> should dispatch set element action 1`] = `
+<div>
+  
+  <div
+    type="div"
+  >
+    Jasmine
+    <span
+      type="span"
+    >
+      word
+    </span>
+  </div>
+  <a
+    href="https://google.com"
+    type="a"
+  >
+    link
+  </a>
+  <button
+    type="button"
+  >
+    click my butt
+  </button>
+  Hello World
+  asadfasdfads
+</div>
+`;

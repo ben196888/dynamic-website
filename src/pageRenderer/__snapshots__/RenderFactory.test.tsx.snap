@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RenderFactory render basic html component - a 1`] = `<a />`;
+
+exports[`RenderFactory render basic html component - button 1`] = `<button />`;
+
+exports[`RenderFactory render basic html component - div 1`] = `<div />`;
+
+exports[`RenderFactory render basic html component - h1 1`] = `<h1 />`;
+
+exports[`RenderFactory render basic html component - span 1`] = `<span />`;
