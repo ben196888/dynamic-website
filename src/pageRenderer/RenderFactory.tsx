@@ -14,11 +14,15 @@ function getAttributesAndProps<P extends {}>(node: ElementNode): Attributes & P 
     .reduce((attributesAndProps, key) => {
       if (/^on[A-Z]/.test(key)) {
         const handler: Handler = node[key];
-        return {
-          ...attributesAndProps,
-          // TODO: find an elegant way to deal with events
-          [key]: (/* event */) => mapToHandler[handler.name](handler.parameters),
-        };
+        if (mapToHandler[handler.name]) {
+          return {
+            ...attributesAndProps,
+            // TODO: find an elegant way to deal with events
+            [key]: (/* event */) => mapToHandler[handler.name](handler.parameters),
+          };
+        }
+        // eslint-disable-next-line no-console
+        console.warn(`Handler: ${handler.name} not found. Please ensure you have registered the handler function in mapToHandler.`);
       }
       return {
         ...attributesAndProps,
