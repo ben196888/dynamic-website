@@ -1,3 +1,4 @@
+// ======== state interface ========
 export type TreeNode = {
   key: string;
   type: string;
@@ -6,15 +7,21 @@ export type TreeNode = {
 
 export type TreeState = TreeNode[];
 
-interface ElementNode {
+export interface Handler<P = any> {
+  name: string;
+  parameters: P;
+}
+
+export interface ElementNode {
   key: string; // TODO: rethink global state
-  [otherProperty: string]: any;
+  [otherProperty: string]: Handler | any;
 }
 
 export interface ElementState {
   [key: string]: ElementNode;
 }
 
+// ======== Payload interface ========
 export interface ElementObject {
   type: string;
   key: string; // TODO: rethink global state
