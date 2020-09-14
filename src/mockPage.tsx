@@ -4,22 +4,35 @@ export const elements: Element[] = [
   {
     key: 'div-one',
     type: 'div',
-    children: ['Jasmine', { key: 'inner', type: 'span', children: ['word'] }],
+    children: ['Hello world ', { key: 'inner', type: 'span', children: ['John Doe'] }],
   }, {
     key: 'link',
     type: 'a',
     href: 'https://google.com',
     children: ['link'],
   }, {
+    key: '_1',
+    type: 'br',
+  }, {
     key: 'button',
     type: 'button',
-    children: ['click my butt'],
+    onClick: {
+      name: 'alert',
+      parameters: {
+        message: 'hello world',
+      },
+    },
+    children: ['click to alert'],
   }, {
     key: 'helloworld',
     type: 'MyComponent',
-    children: ['button'],
+    children: ['my component does not take children'],
   },
-  'asadfasdfads',
+  {
+    key: '_2',
+    type: 'br',
+  },
+  'String can render straight away',
 ];
 
 export default elements;
